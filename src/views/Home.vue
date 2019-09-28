@@ -1,18 +1,28 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <userCard></userCard>
+    <v-row>
+      <v-col>
+        <infoCard><b>Click Save & Load</b><br> To save your previous data</infoCard>
+      </v-col>
+      <v-col>
+        <infoCard><b>Click End Day</b><br> To end the day and refresh stock market</infoCard>
+      </v-col>
+    </v-row>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+const userCard = () => import('@/components/home/userCard')
+const infoCard = () => import('@/components/home/InfoCard')
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
+  metaInfo: {
+    title: 'Stock Trader',
+    titleTemplate: 'Home | %s'
+  },
+  components:{
+    userCard,
+    infoCard
   }
-}
+};
 </script>

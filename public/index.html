@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>stock-trader</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+    <link href="https://unpkg.com/nprogress@0.2.0/nprogress.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+    #nprogress .bar {
+      height: 4px;
+      background: #27c4f5 linear-gradient(to right,#27c4f5,#a307ba,#fd8d32,#70c050,#27c4f5) !important;
+      background-size: 500%;
+      animation: 2s linear infinite barprogress, .3s fadein;
+      width: 100%;
+    }
+    @keyframes barprogress{
+      0% {
+        background-position:0% 0
+      }
+      to{
+        background-position:125% 0
+      }
+    }
+    #nprogress .spinner-icon {
+      border-top-color: transparent;
+      border-left-color: transparent;
+    }
+    </style>
   </head>
   <body>
     <noscript>
@@ -13,5 +38,6 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
   </body>
 </html>

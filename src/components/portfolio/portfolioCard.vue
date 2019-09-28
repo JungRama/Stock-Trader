@@ -41,7 +41,7 @@ export default {
         currency(price){
             return numeral(price).format(0, 0);
         },
-        sell(index){
+        sell(){
             let orderQuantity = this.formInput.quantity
             let portfolioQuantity = this.portfolioData.quantity
             

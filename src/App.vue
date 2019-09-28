@@ -164,10 +164,14 @@
           stocks: this.$store.getters.getStocks
         }
         localStorage.setItem('savedData', JSON.stringify(dataToSave))
+        this.snackbar.status = true
+        this.snackbar.text = 'Success Save Data'
       },
       load(){
         const data = JSON.parse(localStorage.getItem("savedData"))
         this.$store.dispatch('LoadData', data)
+        this.snackbar.status = true
+        this.snackbar.text = 'Success Loaded Previous Data'
       },
       endDay(){
         this.$store.dispatch('randomPrice')

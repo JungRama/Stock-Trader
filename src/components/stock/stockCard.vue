@@ -24,7 +24,6 @@
 
 <script>
 import numeral from 'numeral'
-import { parse } from 'path';
 export default {
     props:[
         'stockdata'

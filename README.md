@@ -1,4 +1,9 @@
-# stock-trader
+# Simple Stock Trader
+```
+Vue js starter app. using vue.js v.2 and cli v.3
+Simple stock trading with static data. 
+sell - buy - end day - manage cash
+```
 
 ## Project setup
 ```
